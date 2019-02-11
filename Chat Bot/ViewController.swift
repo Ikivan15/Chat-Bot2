@@ -19,6 +19,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
+        let text = questionTextView.text.lowercased()
+        
+        let words = text.components(separatedBy: [" ", ".", ","])
+        
+        print(words)
+        if words.contains("hi") {
+            answerLabel.text = "Hi"
+        } else {
+            answerLabel.text = "you lose"
+        }
     }
 }
 
